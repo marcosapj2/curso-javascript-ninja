@@ -23,7 +23,7 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 // ?
-function naoSei (a, b) {
+function myFunction (a, b) {
     return console.log(a[b]);
 }
 /*
@@ -36,10 +36,10 @@ Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
 // ?
-console.log(naoSei(qualquer, 0));
-console.log(naoSei(qualquer, 1));
-console.log(naoSei(qualquer, 2));
-console.log(naoSei(qualquer, 3));
+console.log(myFunction(qualquer, 0));
+console.log(myFunction(qualquer, 1));
+console.log(myFunction(qualquer, 2));
+console.log(myFunction(qualquer, 3));
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
 livro. Dentro dessa função, declare uma variável que recebe um objeto com as
@@ -55,14 +55,33 @@ propriedades:
 os livros.
 */  
 // ?
-function book ( livro ) {
-    var object = {livro1: {quantidadePaginas: 100, autor: 'Marcos Aurélio', editora: 'Casa do Código'}, livro2: {quantidadePaginas: 200, autor: 'Marcos Aurélio', editora: 'Casa do Código'}, livro3: {quantidadePaginas: 120, autor: 'Marcos Aurélio', editora: 'Casa do Código'}};
-    return livro;
+function book ( bookName ) {
+    var allBooks = {
+        bookName1: {
+            quantidadePaginas: 100,
+            autor: 'Marcos Aurélio', 
+            editora: 'Casa do Código'
+        }, 
+        bookName2: {
+            quantidadePaginas: 200, 
+            autor: 'Marcos Aurélio', 
+            editora: 'Casa do Código'
+        }, 
+        bookName3: {
+            quantidadePaginas: 120, 
+            autor: 'Marcos Aurélio', 
+            editora: 'Casa do Código'
+        }
+    };
+    return allBooks[bookName];
     }
     /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
 // ?
+    console.log(book('bookName1'));
+    console.log(book('bookName2'));
+    console.log(book('bookName3'));
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
@@ -70,17 +89,19 @@ usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
 // ?
-
+console.log('O livro bookName1 tem ' +book('bookName1').quantidadePaginas+ ' páginas!')
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
 // ?
-
+console.log('O autor do livro bookName2 é ' +book('bookName1').autor+ '.')
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
 // ?
+console.log('O livro bookName2 foi publicado pela editora ' +book('bookName1').editora+ '.')
+
