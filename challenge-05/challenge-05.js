@@ -104,4 +104,4 @@ a frase:
 */
 // ?
 console.log('O livro bookName2 foi publicado pela editora ' +book('bookName1').editora+ '.')
-
+a
