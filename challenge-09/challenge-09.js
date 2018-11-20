@@ -132,4 +132,4 @@
     console.log(mod(function (a, b) {
         return a % b;
     }))
-});
+}());
