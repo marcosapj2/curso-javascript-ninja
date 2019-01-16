@@ -23,7 +23,7 @@
     que será instanciado.
   */
   // ?
-  function Person (name, lastName, age) {
+  function Person(name, lastName, age) {
     this.name = name;
     this.lastName = lastName;
     this.age = age;
@@ -33,11 +33,11 @@
     this.getAge = function getAge() {
       return this.age;
     }
-    this.addAge =function addAge() {
+    this.addAge = function addAge() {
       this.age += arguments[0];
       return this;
     }
-  } 
+  }
   /*
   Crie 3 novos objetos usando o construtor acima. Os objetos serão novas
   pessoas. As variáveis deverão ser o primeiro nome da pessoa. Passe os
@@ -48,10 +48,10 @@
   // ?
   var marcos = new Person('Marcos', 'Aurélio Pereira Júnior', 20);
   var larissa = new Person('Larissa', 'Ferreira da Costa', 23);
-  var marissandra = new Person ('Marissandra', 'Andrade Rodrigues', 40);
-  console.log (marcos);
-  console.log (larissa);
-  console.log (marissandra);
+  var marissandra = new Person('Marissandra', 'Andrade Rodrigues', 40);
+  console.log(marcos);
+  console.log(larissa);
+  console.log(marissandra);
   /*
   Mostre no console o nome completo de cada pessoa.
   */

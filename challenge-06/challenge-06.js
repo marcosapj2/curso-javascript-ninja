@@ -36,12 +36,12 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 // ?
-function showTeamPosition (a) {
-    if ( a > 0 && a < 6) {
-        return 'O time que está em ' +(a--)+ 'º lugar é o ' +teams[a]+ '.';
-    } else if ( a > 5 ) {
+function showTeamPosition(a) {
+    if (a > 0 && a < 6) {
+        return 'O time que está em ' + (a--) + 'º lugar é o ' + teams[a] + '.';
+    } else if (a > 5) {
         return "Não temos a informação do time que está nessa posição.";
-    } else { return 'Insira um valor válido'; }    
+    } else { return 'Insira um valor válido'; }
 }
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
@@ -77,9 +77,9 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     "Não temos o equivalente hexadecimal para [COR]."
 */
 // ?
-function convertToHex ( color ) {
+function convertToHex(color) {
     var hexa = '#FFFFFF';
-    switch(color) {
+    switch (color) {
         case 'vermelho':
             hexa = '#FF0000';
             break;
@@ -97,7 +97,7 @@ function convertToHex ( color ) {
         default:
             return 'Não temos o equivalente hexadecimal para [COR].';
     }
-    return 'O hexadecimal para a cor '+color+' é '+hexa+'.'
+    return 'O hexadecimal para a cor ' + color + ' é ' + hexa + '.'
 }
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.

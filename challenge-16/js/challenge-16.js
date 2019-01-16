@@ -4,7 +4,7 @@
     2. Adicione a diretiva 'use strict';
     3. Crie um arquivo index.html e adicione esse script à ele.
     */
-   'use strict';
+    'use strict';
     /*
     Declare uma variável chamada `name` que receba seu primeiro nome.
     Mostre no console todas as letras do seu nome separadas, com a frase:
@@ -16,7 +16,7 @@
     */
     console.log('As letras do seu nome:');
     var name = 'Marcos';
-    for (var i = 0; i < name.length ; i++) {
+    for (var i = 0; i < name.length; i++) {
         console.log(name.charAt(i) + ' é a ' + (i + 1) + 'ª letra do meu nome.');
     }
     // ?
@@ -34,10 +34,10 @@
     console.log para cada formato.
     */
     var fullName = 'marcos-aurelio-pereira-junior';
-    
+
     console.log('\nNome convertido à partir de um slug:');
     console.log(fullName);
-    console.log(fullName.split('-').map(function(item){return item.charAt(0).toUpperCase().concat(item.slice(1))}).join(' '));
+    console.log(fullName.split('-').map(function (item) { return item.charAt(0).toUpperCase().concat(item.slice(1)) }).join(' '));
     // ?
 
     /*
@@ -51,8 +51,8 @@
     */
     console.log('\nMeus amigos:');
     var names = ['Marcos', 'Larissa', 'Marissandra', 'Bruno', 'Aline'];
-    var phrase = names.reduce(function(acumulado, atual, index) {
-        var separator = names.length -1 === index ? ' e ' : ', ';
+    var phrase = names.reduce(function (acumulado, atual, index) {
+        var separator = names.length - 1 === index ? ' e ' : ', ';
         return acumulado + separator + atual;
     });
 
@@ -65,7 +65,7 @@
     */
     console.log('\nEra "Roberto", agora é:');
     // ?
-    
+
     console.log('Roberto'.replace('to', 'ta'));
     /*
     Mostre no console a parte "nando" da string "Fernando". Use o método que
@@ -73,7 +73,7 @@
     */
     console.log('\nParte de uma string:');
     // ?
-    console.log('Fernando'.substring( 8, 3 ) );
+    console.log('Fernando'.substring(8, 3));
 
     /*
     Declare uma variável chamada `myName`, que receba o seu primeiro nome,
@@ -90,7 +90,7 @@
     var myName = 'Fernando';
     var myNewName = [];
     for (var i = 0, len = myName.length; i < len; i++) {
-        myNewName.push( i % 2 === 0 ? myName[i].toLowerCase() : myName[i].toUpperCase());
+        myNewName.push(i % 2 === 0 ? myName[i].toLowerCase() : myName[i].toUpperCase());
     }
     console.log(myNewName.join(''));
 }());

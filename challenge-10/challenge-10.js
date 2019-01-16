@@ -151,7 +151,7 @@
     var multiplication = calculator(operationSignal);
     var division = calculator(operationSignal);
     var mod = calculator(operationSignal);
-    
+
     operationSignal = '-';
     if (subtraction) {
         number1 = 10;
@@ -160,7 +160,7 @@
     } else {
         console.log(showErrorMessage(operationSignal));
     }
-    
+
     operationSignal = '*'
     if (multiplication) {
         number1 = 10;

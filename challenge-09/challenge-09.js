@@ -14,8 +14,8 @@
         var number1 = 10;
         var number2 = 20;
 
-        console.log( 'Na função `myFunction`, o primeiro número é', number1 );
-        console.log( 'Na função `myFunction`, o segundo número é', number2 );
+        console.log('Na função `myFunction`, o primeiro número é', number1);
+        console.log('Na função `myFunction`, o segundo número é', number2);
 
         return number1 + number2;
     }
@@ -32,7 +32,7 @@
             return number1 + number2;
         };
 
-        console.log( 'A soma de 10 e 20 é igual a', sum ? sum() : undefined );
+        console.log('A soma de 10 e 20 é igual a', sum ? sum() : undefined);
         return sum();
     }
     myFunction2();
@@ -48,9 +48,9 @@
             return number1 + number2;
         };
 
-        console.log( 'Na função myFunction3, number1 é igual a', number1 );
-        console.log( 'A soma de 40 e 50 é igual a', sum() );
-        
+        console.log('Na função myFunction3, number1 é igual a', number1);
+        console.log('A soma de 40 e 50 é igual a', sum());
+
         return sum();
     }
     myFunction3();
@@ -69,7 +69,7 @@
     que foram passadas para a primeira função `calculator`.
     */
     // ?
-    function calculator (x, y) {
+    function calculator(x, y) {
         return function (callback) {
             return callback(x, y);
         }
@@ -79,7 +79,7 @@
     passando dois números por parâmetro.
     */
     // ?
-    var sum = calculator(10,20);
+    var sum = calculator(10, 20);
     /*
     Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
     `calculator`. E essa função espera um parâmetro `callback`. O `callback`
@@ -89,7 +89,7 @@
     uma função anônima que irá retornar a soma dos dois números que essa função
     anônima tem como seus argumentos.
     */
-    console.log( 'O resultado da soma é:');
+    console.log('O resultado da soma é:');
     console.log(sum(function (a, b) {
         return a + b;
     }))
@@ -101,10 +101,10 @@
     diferentes para cada chamada.
     */
     // ?
-    var subtraction = calculator(10,20);
-    var multiplication = calculator(10,20);
-    var division = calculator(10,20);
-    var mod = calculator(10,20);
+    var subtraction = calculator(10, 20);
+    var multiplication = calculator(10, 20);
+    var division = calculator(10, 20);
+    var mod = calculator(10, 20);
     /*
     Mostre as variáveis acima no `console` (uma chamada de console por variável),
     criando a função de `callback` que faz o cálculo para subração, multiplicação,
@@ -112,22 +112,22 @@
     As suas respostas devem estar abaixo dos `console.log` referentes à cada
     chamada.
     */
-    console.log( 'O resultado da subtração é:' );
+    console.log('O resultado da subtração é:');
     // ?
     console.log(subtraction(function (a, b) {
         return a - b;
     }))
-    console.log( 'O resultado da multiplicação é:' );
+    console.log('O resultado da multiplicação é:');
     // ?
     console.log(multiplication(function (a, b) {
         return a * b;
     }))
-    console.log( 'O resultado da divisão é:' );
+    console.log('O resultado da divisão é:');
     // ?
     console.log(division(function (a, b) {
         return a / b;
     }))
-    console.log( 'O resto da divisão é:' );
+    console.log('O resto da divisão é:');
     // ?
     console.log(mod(function (a, b) {
         return a % b;

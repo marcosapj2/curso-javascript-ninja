@@ -4,7 +4,7 @@ Declare uma variável chamada `sum` e atribua a ela uma função chamada
 desses parâmetros.
 */
 // ?
-var sum = function calculateSum (x, y) {
+var sum = function calculateSum(x, y) {
     return x + y;
 };
 /*
@@ -15,19 +15,19 @@ o resultado no console, com a frase:
 // ?
 var val1 = 10;
 var val2 = 10;
-console.log('A soma de '+val1+' mais '+val2+' é igual a '+sum(val1,val2));
+console.log('A soma de ' + val1 + ' mais ' + val2 + ' é igual a ' + sum(val1, val2));
 /*
 Mostre no console o nome da função criada acima, com a frase:
 "O nome da função que faz a soma é [NOME DA FUNÇÃO]."
 */
 // ?
-console.log('O nome da função que faz a soma é '+sum.name+'.');
+console.log('O nome da função que faz a soma é ' + sum.name + '.');
 /*
 Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
 // ?
-function showName () {
+function showName() {
     return 'Marcos';
 }
 /*
@@ -41,7 +41,7 @@ atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
 // ?
-console.log('A função '+varShowName.name+' retorna '+varShowName()+'.')
+console.log('A função ' + varShowName.name + ' retorna ' + varShowName() + '.')
 /*
 Crie uma função literal chamada `calculator`, que funcione assim:
 - A função deve receber um parâmetro que dirá qual operação matemática ela
@@ -55,33 +55,33 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   "Operação inválida."
 */
 // ?
-function calculator (operator) {
+function calculator(operator) {
     return function (x, y) {
         var result;
         switch (operator) {
-            case '+' :
+            case '+':
                 result = x + y;
                 break;
 
-            case '-' :
+            case '-':
                 result = x - y;
                 break;
 
-            case '*' :
+            case '*':
                 result = x * y;
                 break;
 
-            case '/' :
+            case '/':
                 result = x / y;
                 break;
 
-            case '%' :
+            case '%':
                 result = x % y;
                 break;
-            default :
+            default:
                 return 'Operação inválida!';
         }
-        return  'Resultado da operação: '+x+' '+operator+' '+y+' = '+result+'.'
+        return 'Resultado da operação: ' + x + ' ' + operator + ' ' + y + ' = ' + result + '.'
     }
 }
 /*
@@ -94,7 +94,7 @@ var sum = calculator('+');
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
 // ?
-console.log(sum(10,100));
+console.log(sum(10, 100));
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
 `division` e `mod`, e atribua a elas a função `calculator`, passando o operador
@@ -110,7 +110,7 @@ Faça uma operação com cada uma das funções criadas acima, mostrando o resul
 no console.
 */
 // ?
-console.log(subtraction(50,10));
-console.log(multiplication(50,10));
-console.log(division(50,10));
-console.log(mod(50,10));
+console.log(subtraction(50, 10));
+console.log(multiplication(50, 10));
+console.log(division(50, 10));
+console.log(mod(50, 10));
